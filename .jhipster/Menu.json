@@ -1,0 +1,40 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "grupo",
+            "fieldType": "GrupoMenu",
+            "fieldValues": "ENTRADA,PRATOFRIO,PRATOQUENTE,SOBREMESA"
+        },
+        {
+            "fieldName": "valorNormal",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "tempoPreparo",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "disponivel",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "valorReduzido",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20190519225641",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "menu",
+    "databaseType": "sql",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}
