@@ -29,6 +29,7 @@ export class CartaoCreditoUpdatePage {
   bandeiraSelect = element(by.id('field_bandeira'));
   numeroInput = element(by.id('field_numero'));
   cvInput = element(by.id('field_cv'));
+  nomeCartaoInput = element(by.id('field_nomeCartao'));
 
   async getPageTitle() {
     return this.pageTitle.getAttribute('jhiTranslate');
@@ -63,6 +64,14 @@ export class CartaoCreditoUpdatePage {
 
   async getCvInput() {
     return await this.cvInput.getAttribute('value');
+  }
+
+  async setNomeCartaoInput(nomeCartao) {
+    await this.nomeCartaoInput.sendKeys(nomeCartao);
+  }
+
+  async getNomeCartaoInput() {
+    return await this.nomeCartaoInput.getAttribute('value');
   }
 
   async save(timeout?: number) {

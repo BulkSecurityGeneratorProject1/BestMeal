@@ -17,7 +17,8 @@
       },
       "bandeira": "Bandeira",
       "numero": "Numero",
-      "cv": "Cv"
+      "cv": "Cv",
+      "nomeCartao": "Nome Cartao"
     }
   }
 }

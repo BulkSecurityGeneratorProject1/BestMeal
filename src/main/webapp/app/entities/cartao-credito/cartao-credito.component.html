@@ -18,6 +18,7 @@
             <th jhiSortBy="bandeira"><span jhiTranslate="bestMealApp.cartaoCredito.bandeira">Bandeira</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="numero"><span jhiTranslate="bestMealApp.cartaoCredito.numero">Numero</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="cv"><span jhiTranslate="bestMealApp.cartaoCredito.cv">Cv</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="nomeCartao"><span jhiTranslate="bestMealApp.cartaoCredito.nomeCartao">Nome Cartao</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -27,6 +28,7 @@
                 <td jhiTranslate="{{'bestMealApp.Bandeira.' + cartaoCredito.bandeira}}">{{cartaoCredito.bandeira}}</td>
                 <td>{{cartaoCredito.numero}}</td>
                 <td>{{cartaoCredito.cv}}</td>
+                <td>{{cartaoCredito.nomeCartao}}</td>
                 <td class="text-right">
                     <div class="btn-group">
                         <button type="submit"

@@ -11,8 +11,9 @@ export interface ICartaoCredito {
   bandeira?: Bandeira;
   numero?: string;
   cv?: string;
+  nomeCartao?: string;
 }
 
 export class CartaoCredito implements ICartaoCredito {
-  constructor(public id?: number, public bandeira?: Bandeira, public numero?: string, public cv?: string) {}
+  constructor(public id?: number, public bandeira?: Bandeira, public numero?: string, public cv?: string, public nomeCartao?: string) {}
 }

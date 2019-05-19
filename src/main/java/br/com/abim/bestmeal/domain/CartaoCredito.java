@@ -36,6 +36,9 @@ public class CartaoCredito implements Serializable {
     @Column(name = "cv")
     private String cv;
 
+    @Column(name = "nome_cartao")
+    private String nomeCartao;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -83,6 +86,19 @@ public class CartaoCredito implements Serializable {
     public void setCv(String cv) {
         this.cv = cv;
     }
+
+    public String getNomeCartao() {
+        return nomeCartao;
+    }
+
+    public CartaoCredito nomeCartao(String nomeCartao) {
+        this.nomeCartao = nomeCartao;
+        return this;
+    }
+
+    public void setNomeCartao(String nomeCartao) {
+        this.nomeCartao = nomeCartao;
+    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -108,6 +124,7 @@ public class CartaoCredito implements Serializable {
             ", bandeira='" + getBandeira() + "'" +
             ", numero='" + getNumero() + "'" +
             ", cv='" + getCv() + "'" +
+            ", nomeCartao='" + getNomeCartao() + "'" +
             "}";
     }
 }

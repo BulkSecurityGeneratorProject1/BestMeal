@@ -15,6 +15,10 @@ import { RouterModule } from '@angular/router';
       {
         path: 'menu',
         loadChildren: './menu/menu.module#BestMealMenuModule'
+      },
+      {
+        path: 'cartao-credito',
+        loadChildren: './cartao-credito/cartao-credito.module#BestMealCartaoCreditoModule'
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])

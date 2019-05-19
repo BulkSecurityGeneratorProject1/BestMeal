@@ -23,7 +23,7 @@ describe('Service Tests', () => {
       service = injector.get(CartaoCreditoService);
       httpMock = injector.get(HttpTestingController);
 
-      elemDefault = new CartaoCredito(0, Bandeira.MASTER, 'AAAAAAA', 'AAAAAAA');
+      elemDefault = new CartaoCredito(0, Bandeira.MASTER, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA');
     });
 
     describe('Service methods', () => {
@@ -61,7 +61,8 @@ describe('Service Tests', () => {
           {
             bandeira: 'BBBBBB',
             numero: 'BBBBBB',
-            cv: 'BBBBBB'
+            cv: 'BBBBBB',
+            nomeCartao: 'BBBBBB'
           },
           elemDefault
         );
@@ -81,7 +82,8 @@ describe('Service Tests', () => {
           {
             bandeira: 'BBBBBB',
             numero: 'BBBBBB',
-            cv: 'BBBBBB'
+            cv: 'BBBBBB',
+            nomeCartao: 'BBBBBB'
           },
           elemDefault
         );

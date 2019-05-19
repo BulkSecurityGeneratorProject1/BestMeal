@@ -44,6 +44,9 @@ public class CartaoCreditoResourceIT {
     private static final String DEFAULT_CV = "AAAAAAAAAA";
     private static final String UPDATED_CV = "BBBBBBBBBB";
 
+    private static final String DEFAULT_NOME_CARTAO = "AAAAAAAAAA";
+    private static final String UPDATED_NOME_CARTAO = "BBBBBBBBBB";
+
     @Autowired
     private CartaoCreditoRepository cartaoCreditoRepository;
 
@@ -91,7 +94,8 @@ public class CartaoCreditoResourceIT {
         CartaoCredito cartaoCredito = new CartaoCredito()
             .bandeira(DEFAULT_BANDEIRA)
             .numero(DEFAULT_NUMERO)
-            .cv(DEFAULT_CV);
+            .cv(DEFAULT_CV)
+            .nomeCartao(DEFAULT_NOME_CARTAO);
         return cartaoCredito;
     }
     /**
@@ -104,7 +108,8 @@ public class CartaoCreditoResourceIT {
         CartaoCredito cartaoCredito = new CartaoCredito()
             .bandeira(UPDATED_BANDEIRA)
             .numero(UPDATED_NUMERO)
-            .cv(UPDATED_CV);
+            .cv(UPDATED_CV)
+            .nomeCartao(UPDATED_NOME_CARTAO);
         return cartaoCredito;
     }
 
@@ -131,6 +136,7 @@ public class CartaoCreditoResourceIT {
         assertThat(testCartaoCredito.getBandeira()).isEqualTo(DEFAULT_BANDEIRA);
         assertThat(testCartaoCredito.getNumero()).isEqualTo(DEFAULT_NUMERO);
         assertThat(testCartaoCredito.getCv()).isEqualTo(DEFAULT_CV);
+        assertThat(testCartaoCredito.getNomeCartao()).isEqualTo(DEFAULT_NOME_CARTAO);
     }
 
     @Test
@@ -166,7 +172,8 @@ public class CartaoCreditoResourceIT {
             .andExpect(jsonPath("$.[*].id").value(hasItem(cartaoCredito.getId().intValue())))
             .andExpect(jsonPath("$.[*].bandeira").value(hasItem(DEFAULT_BANDEIRA.toString())))
             .andExpect(jsonPath("$.[*].numero").value(hasItem(DEFAULT_NUMERO.toString())))
-            .andExpect(jsonPath("$.[*].cv").value(hasItem(DEFAULT_CV.toString())));
+            .andExpect(jsonPath("$.[*].cv").value(hasItem(DEFAULT_CV.toString())))
+            .andExpect(jsonPath("$.[*].nomeCartao").value(hasItem(DEFAULT_NOME_CARTAO.toString())));
     }
     
     @Test
@@ -182,7 +189,8 @@ public class CartaoCreditoResourceIT {
             .andExpect(jsonPath("$.id").value(cartaoCredito.getId().intValue()))
             .andExpect(jsonPath("$.bandeira").value(DEFAULT_BANDEIRA.toString()))
             .andExpect(jsonPath("$.numero").value(DEFAULT_NUMERO.toString()))
-            .andExpect(jsonPath("$.cv").value(DEFAULT_CV.toString()));
+            .andExpect(jsonPath("$.cv").value(DEFAULT_CV.toString()))
+            .andExpect(jsonPath("$.nomeCartao").value(DEFAULT_NOME_CARTAO.toString()));
     }
 
     @Test
@@ -208,7 +216,8 @@ public class CartaoCreditoResourceIT {
         updatedCartaoCredito
             .bandeira(UPDATED_BANDEIRA)
             .numero(UPDATED_NUMERO)
-            .cv(UPDATED_CV);
+            .cv(UPDATED_CV)
+            .nomeCartao(UPDATED_NOME_CARTAO);
 
         restCartaoCreditoMockMvc.perform(put("/api/cartao-creditos")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -222,6 +231,7 @@ public class CartaoCreditoResourceIT {
         assertThat(testCartaoCredito.getBandeira()).isEqualTo(UPDATED_BANDEIRA);
         assertThat(testCartaoCredito.getNumero()).isEqualTo(UPDATED_NUMERO);
         assertThat(testCartaoCredito.getCv()).isEqualTo(UPDATED_CV);
+        assertThat(testCartaoCredito.getNomeCartao()).isEqualTo(UPDATED_NOME_CARTAO);
     }
 
     @Test

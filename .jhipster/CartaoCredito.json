@@ -15,6 +15,10 @@
         {
             "fieldName": "cv",
             "fieldType": "String"
+        },
+        {
+            "fieldName": "nomeCartao",
+            "fieldType": "String"
         }
     ],
     "changelogDate": "20190519220547",

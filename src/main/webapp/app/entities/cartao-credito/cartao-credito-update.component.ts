@@ -18,7 +18,8 @@ export class CartaoCreditoUpdateComponent implements OnInit {
     id: [],
     bandeira: [],
     numero: [],
-    cv: []
+    cv: [],
+    nomeCartao: []
   });
 
   constructor(protected cartaoCreditoService: CartaoCreditoService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
@@ -36,7 +37,8 @@ export class CartaoCreditoUpdateComponent implements OnInit {
       id: cartaoCredito.id,
       bandeira: cartaoCredito.bandeira,
       numero: cartaoCredito.numero,
-      cv: cartaoCredito.cv
+      cv: cartaoCredito.cv,
+      nomeCartao: cartaoCredito.nomeCartao
     });
   }
 
@@ -60,7 +62,8 @@ export class CartaoCreditoUpdateComponent implements OnInit {
       id: this.editForm.get(['id']).value,
       bandeira: this.editForm.get(['bandeira']).value,
       numero: this.editForm.get(['numero']).value,
-      cv: this.editForm.get(['cv']).value
+      cv: this.editForm.get(['cv']).value,
+      nomeCartao: this.editForm.get(['nomeCartao']).value
     };
     return entity;
   }
