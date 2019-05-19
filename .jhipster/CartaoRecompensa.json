@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "numero",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "validade",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pontuacao",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "situacao",
+            "fieldType": "SituacaoCartao",
+            "fieldValues": "ATIVO,INATIVO,CANCELADO,PENDENTE"
+        }
+    ],
+    "changelogDate": "20190519224653",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "cartao_recompensa",
+    "databaseType": "sql",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}
