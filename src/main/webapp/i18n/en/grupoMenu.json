@@ -1,0 +1,11 @@
+{
+  "bestMealApp": {
+    "GrupoMenu": {
+      "null": "",
+      "ENTRADA": "ENTRADA",
+      "PRATOFRIO": "PRATOFRIO",
+      "PRATOQUENTE": "PRATOQUENTE",
+      "SOBREMESA": "SOBREMESA"
+    }
+  }
+}
