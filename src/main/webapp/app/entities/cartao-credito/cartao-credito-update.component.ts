@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ICartaoCredito, CartaoCredito } from 'app/shared/model/cartao-credito.model';
 import { CartaoCreditoService } from './cartao-credito.service';
+import { CustomNameValidatorService } from '../../shared/validators/custom-name.service'; // >>> Alterado aqui
 
 @Component({
   selector: 'jhi-cartao-credito-update',
@@ -19,10 +20,18 @@ export class CartaoCreditoUpdateComponent implements OnInit {
     bandeira: [],
     numero: [],
     cv: [],
-    nomeCartao: []
+    nomeCartao: [
+      null,
+      [Validators.required, Validators.minLength(10), Validators.maxLength(40), this.nameValidatorService.forbiddenNameValidator(/bosco/i)] // >>> Alterado aqui]
+    ]
   });
 
-  constructor(protected cartaoCreditoService: CartaoCreditoService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
+  constructor(
+    protected cartaoCreditoService: CartaoCreditoService,
+    protected activatedRoute: ActivatedRoute,
+    private fb: FormBuilder,
+    protected nameValidatorService: CustomNameValidatorService // >>> Alterado aqui
+  ) {}
 
   ngOnInit() {
     this.isSaving = false;
